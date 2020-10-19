@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shout optimizer demo</title>
+</head>
+<body>
+
+    <h1>SHOUT OPTIMIZER </h1>
+    <h2>✧･ﾟ: *✧･ﾟ:* early access *:･ﾟ✧*:･ﾟ✧</h2>
+
+    <p>Search for an item or keyword to get a price suggestion.</p>
+
+    <form action="" method="post">
+        <p>
+            <label for="itemname">Search: </label>
+            <input type="text" name="itemname">
+        </p>
+        <p>
+            <input type="submit", value = "submit">
+        </p>
+    </form>
+
+    <b>Search results for {{item}}:</b>
+
+    
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    {% if f %}
+        <p>{{ f }}</p>
+    {% else %}
+        <p>Selling price: {{ median }}€</p>
+        <p>Buying price: {{ minimi }}€</p>
+        <p>Links to previous auctions:</p>
+        <ul>
+            {% for l in links %}
+                <li><a href = "{{l}}" >{{ l }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h3>【☆】★【☆】★【☆】★【☆】★【☆】★【☆】★【☆】★【☆】★【☆】</h3>
+
+</body>
+</html>
