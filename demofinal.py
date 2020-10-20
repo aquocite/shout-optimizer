@@ -17,6 +17,7 @@ from ast import literal_eval
 app = Flask(__name__)
 
 clusters = pd.read_csv("huutoClusters.csv", converters = {"cTitle": literal_eval, "links": literal_eval})
+clusters = clusters.drop(index = 4)
 
 ###Search algo
 
