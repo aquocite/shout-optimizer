@@ -1,1 +1,1 @@
-web: gunicorn app:demofinal.py
+web: gunicorn demofinal:app
